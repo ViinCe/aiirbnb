@@ -39,6 +39,9 @@ gem 'heroku'
 # Devise
 gem 'devise'
 
+# Language Français
+gem 'devise-i18n'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

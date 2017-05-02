@@ -33,6 +33,11 @@ gem 'jbuilder', '~> 2.5'
 # Bootstrap sass
 gem 'bootstrap-sass'
 
+# Heroku
+gem 'heroku'
+
+# Devise
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

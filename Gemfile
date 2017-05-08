@@ -41,9 +41,14 @@ gem 'devise'
 
 # Language Français
 gem 'devise-i18n'
+gem 'rails-i18n'
 
 # Paperclip
 gem "paperclip"
+
+# Toastr rails
+gem 'toastr-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

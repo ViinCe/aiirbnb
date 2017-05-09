@@ -49,6 +49,8 @@ gem "paperclip"
 # Toastr rails
 gem 'toastr-rails'
 
+# font awesome sass
+gem "font-awesome-sass"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

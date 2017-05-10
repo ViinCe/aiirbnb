@@ -10,7 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508213049) do
+ActiveRecord::Schema.define(version: 20170510195142) do
+
+  create_table "_rooms_old_20170509", force: :cascade do |t|
+    t.string   "home_type"
+    t.string   "room_type"
+    t.integer  "accomodate"
+    t.integer  "bed_room"
+    t.integer  "bath_room"
+    t.string   "listing_name"
+    t.text     "summary"
+    t.string   "address"
+    t.boolean  "is_wifi"
+    t.boolean  "is_tv"
+    t.boolean  "is_closet"
+    t.boolean  "is_shampoo"
+    t.boolean  "is_breafast"
+    t.boolean  "is_heating"
+    t.boolean  "is_air"
+    t.boolean  "is_kitchen"
+    t.integer  "price"
+    t.boolean  "active"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer  "room_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["room_id"], name: "index_photos_on_room_id"
+  end
 
   create_table "rooms", force: :cascade do |t|
     t.string   "home_type"
@@ -25,7 +60,7 @@ ActiveRecord::Schema.define(version: 20170508213049) do
     t.boolean  "is_tv"
     t.boolean  "is_closet"
     t.boolean  "is_shampoo"
-    t.boolean  "is_breafast"
+    t.boolean  "is_breakfast"
     t.boolean  "is_heating"
     t.boolean  "is_air"
     t.boolean  "is_kitchen"

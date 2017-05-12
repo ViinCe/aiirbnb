@@ -52,6 +52,8 @@ gem 'toastr-rails'
 # font awesome sass
 gem "font-awesome-sass"
 
+gem "geocoder"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

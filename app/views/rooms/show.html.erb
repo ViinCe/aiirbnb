@@ -8,6 +8,8 @@
             </div>
         </div>
 
+        <br>
+        
         <!--Informations principales-->
         <div class="row">
             <div class="col-md-8">
@@ -116,18 +118,51 @@
                       <% end %>
                     </div>
 
-
-                  <!-- Left and right controls -->
-                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Précédent</span>
-                  </a>
-                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Suivant</span>
-                  </a>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Précédent</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Suivant</span>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+        
+        <br>
+        
+        <!-- Google maps -->
+        <div class="row">
+            <div class="col-md-12">
+                <div id="map"></div>
+
+                <style>
+                   #map {
+                    height: 400px;
+                    width: 100%;
+                   }
+                </style>
+                
+                <script>
+                  function initMap() {
+                    var uluru = {lat: <%= @room.latitude %>, lng: <%= @room.longitude %>};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 15,
+                      center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map
+                    });
+                  }
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn4h-SSICOuxSol7EiI-8HIYErHDeWyWc&callback=initMap">
+                </script>
+            </div>
+        </div>
+
+    </div>  
 </div>

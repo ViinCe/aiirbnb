@@ -73,6 +73,7 @@ GEM
     ffi (1.9.18)
     font-awesome-sass (4.7.0)
       sass (>= 3.2)
+    geocoder (1.4.3)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     heroku (3.41.5)
@@ -232,6 +233,7 @@ DEPENDENCIES
   devise
   devise-i18n
   font-awesome-sass
+  geocoder
   heroku
   jbuilder (~> 2.5)
   jquery-rails

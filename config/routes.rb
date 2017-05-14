@@ -9,13 +9,14 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   resources :users, only: [:show]
-  resources :rooms do
+  resources :rooms, path: 'mes_annonces' do
   	resources :reservations, only: [:create]
   end
   resources :photos
 
   get '/preload' => 'reservations#preload'
   get '/preview' => 'reservations#preview'
+  get '/your_trips' => 'reservations#your_trips', path: 'mes_voyages'
 
 
 end

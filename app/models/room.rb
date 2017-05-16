@@ -17,7 +17,7 @@ class Room < ApplicationRecord
   after_validation :geocode, if: :address_changed?
 
   def average_rating
-    reviews.count == 0 ? 0 : reviews.average(:star).round(2)
+    reviews.count == 0 ? 0 : reviews.average(:stars).round(2)
   end
 
 end

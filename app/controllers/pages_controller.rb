@@ -1,10 +1,11 @@
 class PagesController < ApplicationController
 
     def home
+    	@rooms = Room.order("RANDOM()").limit(3)
     end
 
     def search
-    	if params[:search].present? && params[:search].strip = != ""
+    	if params[:search].present? && params[:search].strip != ""
     		session[:aiirbnb_search] = params[:search]
     	end
 

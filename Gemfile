@@ -55,6 +55,8 @@ gem "font-awesome-sass"
 gem "geocoder"
 gem "jquery-ui-rails"
 
+gem 'ransack'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
